@@ -20,3 +20,9 @@ function getRandomColor(){
 
     return color;
 }
+
+//make a function to add one square
+
+function changeColors(){
+    let allSquares = document.querySelectorAll(".square");
+}
