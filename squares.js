@@ -21,8 +21,20 @@ function getRandomColor(){
     return color;
 }
 
-//make a function to add one square
 
 function changeColors(){
-    let allSquares = document.querySelectorAll(".square");
+    let allSquares = document.querySelectorAll(".square"); // selects all squares
+    for (let i = 0; i < allSquares.length; i++){
+        allSquares[i].style.backgroundColor = getRandomColor();
+    }
 }
+
+function addSquare(){
+    let square = document.createElement("div");
+    square.className = "square";
+    square.style.top = parseInt(Math.random()*250)+"px";
+    square.style.left = parseInt(Math.random()*650)+"px";
+    square.style.backgroundColor = getRandomColor();
+    squareArea.append(square);
+}
+
